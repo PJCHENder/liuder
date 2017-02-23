@@ -83,6 +83,17 @@ a
 	.navbar-custom.top-nav-collapse
 		border-bottom: 1px solid rgba(255,255,255,0.3)
 
+
+//	Filter Background
+.filter-background
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	z-index: 1
+	filter: brightness(70%)
+
 // Landing Page
 .intro
 	display: table
@@ -91,11 +102,15 @@ a
 	padding: 100px 0
 	text-align: center
 	color: $light
-	background: $dark url("../img/intro-bg.jpg") no-repeat bottom center scroll
-	background-size: cover
+	position: relative
+	& .intro-background-image
+		background: $dark url("../img/intro-bg.jpg") no-repeat bottom center scroll
+		background-size: cover
 	& .intro-body
 		display: table-cell
 		vertical-align: middle
+		position: relative
+		z-index: 2
 		& .brand-handing
 			font-size: 40px
 		& .sub-brand
@@ -118,7 +133,7 @@ a
 
 //  Content Section
 .content-section
-	padding: 70px 0 40px
+	padding: 70px 15px 40px
 	.space 
 		padding-bottom: 30px
 
@@ -138,14 +153,19 @@ a
 		margin-top: 10px
 
 //  who section
-.who-section
-	width: 100%
-	padding: 50px 0
-	color: $light
-	background: $dark url("../img/downloads-bg.jpg") no-repeat center center scroll
-	background-size: cover
-	p
-		text-shadow: 2px 2px 8px #000
+#who
+	position: relative
+	.who-background-image
+		background: $dark url("../img/downloads-bg.jpg") no-repeat center center scroll
+		background-size: cover
+	.who-section
+		width: 100%
+		padding: 100px 0
+		color: $light
+		position: relative
+		z-index: 2
+		p
+			text-shadow: 2px 2px 8px #000
 
 @media only screen and (min-width: 767px)
 	.who-section

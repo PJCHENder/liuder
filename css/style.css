@@ -73,6 +73,15 @@ a {
   .navbar-custom.top-nav-collapse {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); } }
 
+.filter-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  filter: brightness(70%); }
+
 .intro {
   display: table;
   width: 100%;
@@ -80,11 +89,15 @@ a {
   padding: 100px 0;
   text-align: center;
   color: #f4f4f4;
-  background: #333 url("../img/intro-bg.jpg") no-repeat bottom center scroll;
-  background-size: cover; }
+  position: relative; }
+  .intro .intro-background-image {
+    background: #333 url("../img/intro-bg.jpg") no-repeat bottom center scroll;
+    background-size: cover; }
   .intro .intro-body {
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    position: relative;
+    z-index: 2; }
     .intro .intro-body .brand-handing {
       font-size: 40px; }
     .intro .intro-body .sub-brand {
@@ -106,7 +119,7 @@ a {
       font-size: 25px; } }
 
 .content-section {
-  padding: 70px 0 40px; }
+  padding: 70px 15px 40px; }
   .content-section .space {
     padding-bottom: 30px; }
 
@@ -124,14 +137,19 @@ a {
     width: 30%;
     margin-top: 10px; }
 
-.who-section {
-  width: 100%;
-  padding: 50px 0;
-  color: #f4f4f4;
-  background: #333 url("../img/downloads-bg.jpg") no-repeat center center scroll;
-  background-size: cover; }
-  .who-section p {
-    text-shadow: 2px 2px 8px #000; }
+#who {
+  position: relative; }
+  #who .who-background-image {
+    background: #333 url("../img/downloads-bg.jpg") no-repeat center center scroll;
+    background-size: cover; }
+  #who .who-section {
+    width: 100%;
+    padding: 100px 0;
+    color: #f4f4f4;
+    position: relative;
+    z-index: 2; }
+    #who .who-section p {
+      text-shadow: 2px 2px 8px #000; }
 
 @media only screen and (min-width: 767px) {
   .who-section {

@@ -45,13 +45,14 @@
   </nav>
   <!-- intro section -->
   <section class="intro">
+   <div class="filter-background intro-background-image"></div>
     <div class="intro-body">
-      <div class="container">
+      <div class="container" itemscope itemtype="http://schema.org/Organization">
         <div class="row">
           <div class="col-md-11 col-md-offset-1">
-            <h1 class="brand-heading">六德環保清理事業</h1>
+            <h1 class="brand-heading" itemprop="name">六德環保清理事業</h1>
             <h1 class="sub-brand">—陸德環保有限公司—</h1>
-            <p class="intro-text">服務項目：一般垃圾清除、動植物廢渣清除、營建廢棄物清除、廢木材資源再利用、有機無機污泥清運、資源垃圾回收、大樓清潔、環境整潔、鋤草整地等等</p>
+            <p class="intro-text" itemprop="makesOffer">服務項目：一般垃圾清除、動植物廢渣清除、營建廢棄物清除、廢木材資源再利用、有機無機污泥清運、資源垃圾回收、大樓清潔、環境整潔、鋤草整地等等</p>
           </div>
         </div>
       </div>
@@ -60,7 +61,6 @@
   <!-- why section -->
   <section id="why" class="container content-section">
     <h2 class="text-center">眾多客戶選擇我們的原因</h2>
-    <!--        <p class="text-center">關於我們</p>-->
     <div class="row space">
       <div class="col-md-4">
         <div class="block block-icon-left">
@@ -121,11 +121,16 @@
     </div>
   </section>
   <!-- who section -->
-  <section id="who" class="content-section text-center">
+  <section id="who" class="text-center">
+   	<div class="filter-background who-background-image"></div>
     <div class="who-section">
-      <div class="container" style="padding:40px; background-color: rgba(0,0,0,0.3)">
+      <div class="container">
         <h2>服務項目</h2>
-        <p class="lead"><strong>六德環保清理事業</strong> 成立於民國82年，從事在地環保業物廿年餘載。秉持合法的精神、專業的技術水準、誠心誠意的品質保證、節能高效的目標、熱誠投入的服務以及愛護地球、保護環境為職責配合政府響應環保政策之使命，致力為花東淨土努力不懈，矢志留給鄉親一個綠色永續的家。</p> <a href="#contact" class="btn btn-default btn-lg" style="margin-top:30px">立即連絡我們</a> </div>
+        <p class="lead">
+        <strong>六德環保清理事業</strong> 成立於民國82年，從事在地環保業物廿年餘載。秉持合法的精神、專業的技術水準、誠心誠意的品質保證、節能高效的目標、熱誠投入的服務以及愛護地球、保護環境為職責配合政府響應環保政策之使命，致力為花東淨土努力不懈，矢志留給鄉親一個綠色永續的家。
+        </p> 
+        <a href="#contact" class="btn btn-default btn-lg" style="margin-top:30px">立即連絡我們</a> 
+        </div>
     </div>
   </section>
   <!-- client section -->
@@ -149,10 +154,12 @@
   </section>
   <!-- contact section -->
   <section id="contact" class="content-section text-center">
-    <div class="row">
+    <div class="row" itemscope itemtype="http://schema.org/Organization">
       <div class="col-md-8 col-md-offset-2">
         <h2>聯絡方式</h2>
-        <p>若有任何廢棄物處理之需求，歡迎來電洽詢 TEL: 038577207 FAX: 038579196</p>
+        <p>若有任何廢棄物處理之需求，歡迎來電洽詢 TEL: <span itemprop="telephone">038577207</span> FAX: 038579196</p>
+        <p>營業時間：<span itmeprop="">09:00 - 17:00</span></p>
+        <p itemprop="address">花蓮縣吉安鄉自強路471號</p>
         <div class="iframe-rwd">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.3020966844124!2d121.58829281413013!3d23.98510708447417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34689fa3880ceeaf%3A0xe03025a0bb172af4!2z5YWt5b6355Kw5L-d5riF55CG5LqL5qWt!5e0!3m2!1szh-TW!2stw!4v1482309159041" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
@@ -160,7 +167,7 @@
     </div>
   </section>
   <footer>
-    <p class="text-center">六德環保清理事業 © 2016 版權所有</p>
+    <p class="text-center">六德環保清理事業 © 2017 版權所有</p>
   </footer>
   <!-- Bootstrap core JavaScript
     ================================================== -->

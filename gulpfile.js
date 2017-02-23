@@ -1,6 +1,7 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 
 
 // Static Server + watching scss/html files
@@ -10,17 +11,29 @@ gulp.task('serve', ['sass'], function() {
         server: "./"
     });
 
-    gulp.watch("./vendor/*.sass", ['sass']);
+    gulp.watch("./assets/*.sass", ['sass']);
     gulp.watch("*.html").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("./vendor/*.sass")
+    return gulp.src("./assets/*.sass")
         .pipe(sass())
         .pipe(gulp.dest("./css/"))
         .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['serve']);
+//	Create CSS AutoPrefix
+
+gulp.task('auto_prefix', function(){
+    gulp.src('./css/*.css')
+        .pipe(autoprefixer({
+            browsers: ['> 5%'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('css'))
+});
+
+
+gulp.task('default', ['serve','auto_prefix']);
 

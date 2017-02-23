@@ -1,11 +1,13 @@
 {
-  "name": "bs_t2",
+  "name": "liuder",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-postcss": "^6.3.0",
     "gulp-sass": "^2.3.2",
     "gulp-webserver": "^0.9.1"
   },

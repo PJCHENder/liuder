@@ -33,20 +33,38 @@ a {
   text-transform: uppercase;
   font-family: "Helvetica Neue",Helvetica,'Noto Sans TC',sans-serif;
   background-color: #333; }
+  .navbar .navbar-collapse {
+    background-color: #333; }
   .navbar .navbar-brand {
-    font-weight: 700; }
+    font-weight: 700;
+    height: 100%;
+    padding-top: 10px; }
+    .navbar .navbar-brand > img {
+      display: inline-block;
+      width: 30px;
+      height: auto;
+      vertical-align: middle; }
+      .navbar .navbar-brand > img span {
+        vertical-align: middle; }
     .navbar .navbar-brand:focus {
       outline: none; }
 
-.navbar-custom a {
-  color: #f4f4f4; }
+@media only screen and (max-width: 990px) {
+  .title {
+    display: none; } }
 
-.navbar-custom .nav li a {
-  -webkit-transition: background .3s ease-in-out;
-  transition: background .3s ease-in-out; }
-  .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.2); }
+.navbar-custom {
+  height: 50px; }
+  .navbar-custom a {
+    color: #f4f4f4; }
+  .navbar-custom .nav li a {
+    width: 100%;
+    transition: background .3s ease-in-out; }
+    .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.2); }
+  .navbar-custom .mobile-header {
+    height: 50px; }
 
 .navbar-custom .nav li.active {
   outline: none;
@@ -67,8 +85,9 @@ a {
     border-bottom: none;
     letter-spacing: 1px;
     background: transparent;
-    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
     transition: background .5s ease-in-out, padding .5s ease-in-out; }
+    .navbar .navbar-collapse {
+      background: transparent; }
   .top-nav-collapse {
     padding: 0;
     background-color: #333; }
@@ -82,7 +101,6 @@ a {
   top: 0;
   bottom: 0;
   z-index: 1;
-  -webkit-filter: brightness(70%);
   filter: brightness(70%); }
 
 .intro {
@@ -191,9 +209,5 @@ footer {
   height: 80px; }
 
 .page-scroll {
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 1s;
   transition-duration: 1s; }

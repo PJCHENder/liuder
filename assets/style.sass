@@ -41,19 +41,36 @@ a
 	text-transform: uppercase
 	+ff
 	background-color: $dark
+	& .navbar-collapse
+		background-color: $dark
 	& .navbar-brand
 		font-weight: 700
+		height: 100%
+		padding-top: 10px
+		&> img
+			display: inline-block
+			width: 30px
+			height: auto
+			vertical-align: middle
+			& span
+				vertical-align: middle
 		&:focus
 			outline: none
-
+@media only screen and (max-width: 990px)
+	.title
+		display: none
 .navbar-custom
+	height: 50px
 	& a
 		color: $light
 	& .nav li a
+		width: 100%
 		transition: background .3s ease-in-out
 		&:hover, &:focus
 			outline: none
 			background-color: rgba(255, 255, 255, 0.2)
+	& .mobile-header
+		height: 50px
 
 .navbar-custom .nav li.active 
     outline: none
@@ -77,6 +94,8 @@ a
 		letter-spacing: 1px
 		background: transparent
 		transition: background .5s ease-in-out, padding .5s ease-in-out
+		& .navbar-collapse
+			background: transparent
 	.top-nav-collapse
 		padding: 0
 		background-color: $dark

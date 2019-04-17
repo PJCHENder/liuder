@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+<svg version="1.1" baseProfile="tiny" xmlns="https://www.w3.org/2000/svg" width="200" height="200">
 <rect shape-rendering="optimizeSpeed"  x="0" y="0" width="200" height="200" fill="white" />
 <rect shape-rendering="optimizeSpeed"  x="12" y="12" width="7" height="7" fill="black" />
 <rect shape-rendering="optimizeSpeed"  x="19" y="12" width="7" height="7" fill="black" />
